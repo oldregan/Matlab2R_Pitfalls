@@ -70,3 +70,19 @@ p is column vector
 2. R: mat[k,]<- p
 
 It seems R is loose with dimension compatibility checking.
+
+## exponential distribution generator
+1. Matlab: exprnd(mu), here is the mu = 1/rate
+2. R: rexp(n,rate = 1);
+
+So Matlab:
+
+ ```
+ exprnd(2)
+
+```
+is equavilent to R:
+
+```r
+rexp(1,1/2)
+```
