@@ -71,7 +71,17 @@ p is column vector
 
 It seems R is loose with dimension compatibility checking.
 
-## exponential distribution generator
+
+---
+**rule of thumb for following rng functions:**
+
+Name in R(prefix in R, suffix in Matlab)
+1. density(d,pdf)
+2. Probability function(p,cdf)
+3. quantile function(q,inv)
+4. random number generator(r,rnd)
+---
+## exponential rng
 1. Matlab: exprnd(mu), here is the mu = 1/rate
 2. R: rexp(n,rate = 1);
 
@@ -91,3 +101,33 @@ rexp(1,1/2)
 1. Matlab: gammarnd(shape,scale)
 2. R: rgamma(n, shape, rate = 1, scale = 1/rate)
 3. Rcpp::R: dobule R::rgamma(double a, dobule scale)
+
+## beta rng
+
+
+1. R:
+
+```
+dbeta(x, shape1, shape2, ncp = 0, log = FALSE)
+pbeta(q, shape1, shape2, ncp = 0, lower.tail = TRUE, log.p = FALSE)
+qbeta(p, shape1, shape2, ncp = 0, lower.tail = TRUE, log.p = FALSE)
+rbeta(n, shape1, shape2, ncp = 0)
+
+```
+2. Matlab:
+
+```
+betapdf(X,A,B)
+betacdf(x,a,b)
+betainv(P,A,B)
+betarnd(A,B)
+```
+3. Rcpp:R
+
+```
+double 	dbeta (double x, double a, double b, int lg)
+double 	pbeta (double x, double p, double q, int lt, int lg)
+double 	qbeta (double a, double p, double q, int lt, int lg)
+double 	rbeta (double a, double b)
+
+```
