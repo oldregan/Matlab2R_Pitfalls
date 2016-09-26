@@ -86,3 +86,8 @@ is equavilent to R:
 ```r
 rexp(1,1/2)
 ```
+
+## gamma rng
+1. Matlab: gammarnd(shape,scale)
+2. R: rgamma(n, shape, rate = 1, scale = 1/rate)
+3. Rcpp::R: dobule R::rgamma(double a, dobule scale)
