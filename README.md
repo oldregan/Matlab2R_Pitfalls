@@ -131,3 +131,7 @@ double 	qbeta (double a, double p, double q, int lt, int lg)
 double 	rbeta (double a, double b)
 
 ```
+
+## `any()` function
+1. Matlab: `any([1,0,1])` works, in R will throw warning
+2. R: `any(c(1,0,1)==1)`
