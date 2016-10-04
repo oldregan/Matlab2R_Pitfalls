@@ -30,6 +30,11 @@ Produce completely different results
 ## max, min functions
 min max functions will behave differently when input is NULL(NA,NaN) in R and Matlab
 
+1. Matlab: max(NaN,0.01) will return 0.01
+2. R: max(NA,0.01) will return NA and max(NaN,0.01) will return 0.01
+
+min also have similar behavior
+
 ## find function
 1. Matlab
 2. R
